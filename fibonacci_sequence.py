@@ -16,6 +16,7 @@ class Fibonacci:
      
 
 userTerm = int (input("Enter term: "))
+ordinal = lambda userterm: "%d%s" % (userterm,"tsnrhtdd"[(userTerm//10%10!=1)*(userTerm%10<4)*userterm%10::4])
 limit = userTerm
 while limit > 0:
     
@@ -23,7 +24,7 @@ while limit > 0:
     numerator = Mycal.fTerm()-Mycal.sTerm()
     denominator = math.sqrt(5)
     fn = int (numerator/denominator)
-    print("The value of the "+ str(userTerm)+"th term is: " + str (fn))
+    print("The value of the "+ str(ordinal(userTerm))+ " term is: " + str (fn))
     userTerm = userTerm-1
     limit = limit-1 
 
